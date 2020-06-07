@@ -1,16 +1,21 @@
 <?php
 
-namespace Adelf\Config;
+namespace Dennykuo\Config;
 
 use Illuminate\Config\Repository;
 use Symfony\Component\Finder\Finder;
 
 class ConfigBag extends Repository
 {
-    public function __construct(array $items = [])
+    public function __construct(array $items = [], $configPath)
     {
         parent::__construct($items);
-        $this->loadConfigurationFiles(env('CONFIGURATION_FILE_PATH', './configs'));
+        
+        $configPath = $configPath === null
+                      ? './config'
+                      : $configPath;
+                      
+        $this->loadConfigurationFiles($configPath);
     }
 
     /**

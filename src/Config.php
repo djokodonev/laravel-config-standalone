@@ -1,14 +1,16 @@
 <?php
 
-namespace Adelf\Config;
+namespace Dennykuo\Config;
+
+require_once __DIR__ . '/helpers.php';
 
 class Config extends Singletonable
 {
     private $repository;
 
-    protected function configure($instance)
+    protected function configure($instance, $configPath)
     {
-        $this->repository = new ConfigBag();
+        $this->repository = new ConfigBag([], $configPath);
     }
 
     public function __call($name, $arguments)

@@ -1,6 +1,6 @@
 <?php
 
-namespace Adelf\Config;
+namespace Dennykuo\Config;
 
 abstract class Singletonable
 {
@@ -17,12 +17,13 @@ abstract class Singletonable
      *
      * @return $this
      */
-    public static function instance()
+    public static function instance($configPath = null)
     {
         static $instance = null;
+        
         if (null === $instance) {
             $instance = new static();
-            $instance->configure($instance);
+            $instance->configure($instance, $configPath);
         }
 
         return $instance;
@@ -35,8 +36,8 @@ abstract class Singletonable
      *
      * @return mixed
      */
-    protected function configure($instance)
-    {
-        return $instance;
-    }
+    // protected function configure($instance)
+    // {
+    //     return $instance;
+    // }
 }
