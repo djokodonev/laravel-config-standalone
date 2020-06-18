@@ -1,11 +1,12 @@
 <?php
 
-use Dennykuo\Config\Config;
-
+/**
+ * @return array
+ */
 if (! function_exists('config')) {
     function config($configName = null)
     {
-        $instance = Config::instance();
+        $instance = Dennykuo\Config\Config::instance();
 
         if ($configName === null) {
             return  $instance->all();

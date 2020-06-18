@@ -2,8 +2,6 @@
 
 namespace Dennykuo\Config;
 
-require_once __DIR__ . '/helpers.php';
-
 class Config extends Singletonable
 {
     private $repository;

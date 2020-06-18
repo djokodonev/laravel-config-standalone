@@ -1,5 +1,5 @@
 {
-  "name": "dennukuo/laravel-config-standalone",
+  "name": "dennykuo/laravel-config-standalone",
   "description": "An abstraction layer to provide the Laravel framework configuration system decoupled",
   "type": "library",
   "license": "MIT",
