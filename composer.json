@@ -10,7 +10,7 @@
   ],
   "require": {
     "illuminate/config": "^7.0",
-    "symfony/finder": "^5.0"
+    "symfony/finder": "^5.0|^2.7"
   },
   "autoload": {
     "psr-4": {
