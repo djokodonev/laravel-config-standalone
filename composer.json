@@ -1,15 +1,18 @@
 {
-  "name": "dennykuo/laravel-config-standalone",
+  "name": "djokodonev/laravel-config-standalone",
   "description": "An abstraction layer to provide the Laravel framework configuration system decoupled",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
       "name": "Denny Kuo"
+    },
+    {
+      "name": "George Donev"
     }
   ],
   "require": {
-    "illuminate/config": "^7.0|^5.1",
+    "illuminate/config": "^10.0|^5.1",
     "symfony/finder": "^5.0|^2.7"
   },
   "autoload": {
